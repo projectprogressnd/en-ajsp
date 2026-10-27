@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- canonical teg -->
+    <link rel="canonical" href="https://en.ajsp.uz/">
+	<!-- title -->
+    <title>Academic Journal of Science and Progress</title>
+	<meta name="description" content="AJSP international scientific journal: peer-reviewed research papers and academic articles.">
+	<!-- favicon.ico / -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<!-- googlefonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<!-- styles -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo-area">
+                <img src="images/logo.svg" alt="AJSP Logo" style="height: 42px; width: auto; vertical-align: middle;">
+                <div>
+                    <div class="brand-title">Academic Journal</div>
+                    <div class="brand-subtitle">Science & Progress</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="about.html">About Journal</a></li>
+                    <li><a href="authors.html">For Authors</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="status-badge"><div class="pulse-dot"></div> International Scientific Platform</div>
+        <h1>Academic Journal of Science and Progress</h1>
+        <p>A high-indexing international electronic scientific portal covering pressing issues in science, technology, and innovation.</p>
+    </section>
+
+    <div class="main-container">
+        <main>
+            <section class="card">
+                <h2><i class="fa-solid fa-circle-nodes"></i> About the Platform</h2>
+                <p style="color: var(--text-muted);"><strong>Academic Journal of Science and Progress</strong> – a modern platform created for the rapid international publication of scientific research and experimental results.</p>
+                <div class="metrics-grid">
+                    <div class="metric-box"><div class="metric-value">Open Access</div><div class="metric-label">Open Access Policy</div></div>
+                    <div class="metric-box"><div class="metric-value">Double-Blind</div><div class="metric-label">Peer Review</div></div>
+                    <div class="metric-box"><div class="metric-value">Monthly</div><div class="metric-label">Publication Frequency</div></div>
+                    <div class="metric-box"><div class="metric-value">Crossref DOI</div><div class="metric-label">Digital Identification</div></div>
+                </div>
+            </section>
+			<!-- Блок для отображения последних статей -->
+<section class="card">
+    <h2><i class="fa-solid fa-file-lines"></i> Latest Published Articles</h2>
+    <div id="recent-articles-container">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Loading articles...</p>
+    </div>
+    <div style="margin-top: 20px; text-align: right;">
+        <a href="archive.html" style="font-size: 0.9rem; font-weight: 600; color: var(--accent-cyan);">View all archive <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+    </div>
+</section>
+        </main>
+        <aside>
+            <div class="card">
+                <h3><i class="fa-solid fa-shield-halved"></i> Metrics</h3>
+                <div class="sidebar-item"><span class="sidebar-label">Founder:</span><span class="sidebar-val">Project Progress</span></div>
+                <div class="sidebar-item"><span class="sidebar-label">Languages:</span><span class="sidebar-val">UZ / EN / RU</span></div>
+                <div class="sidebar-item"><span class="sidebar-label">ISSN:</span><span class="sidebar-val" style="color: var(--accent-cyan);">3162-1732</span></div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>&copy; 2026 Academic Journal of Science and Progress. Project Progress. All rights reserved.</footer>
+    <script src="theme.js"></script>
+	<!-- СКРИПТ АВТОМАТИЧЕСКОЙ ЗАГРУЗКИ СТАТЕЙ ИЗ articles.json -->
+    <script>
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const response = await fetch('articles.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        
+        const articles = await response.json();
+        
+        // Сортируем по дате (от новых к старым) и берем первые 5
+        articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const latestArticles = articles.slice(0, 5);
+        
+        const container = document.getElementById('recent-articles-container');
+        if (!container) return;
+        
+        if (latestArticles.length === 0) {
+            container.innerHTML = '<p style="color: var(--text-muted); font-size: 0.9rem;">No articles available yet.</p>';
+            return;
+        }
+        
+        // Генерируем карточки, используя класс .card и стили сайта
+        container.innerHTML = latestArticles.map((art) => {
+            let doiLink = art.doi;
+            if (!doiLink.startsWith('http')) {
+                doiLink = 'https://doi.org/' + art.doi;
+            }
+            
+            return `
+                <div class="card" style="padding: 20px 24px; margin-bottom: 20px;">
+                    <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 10px; font-family: 'Cinzel', serif; border: none; padding: 0;">
+                        <a href="${art.url}" style="color: var(--primary-navy); text-decoration: none;">${art.title}</a>
+                    </h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 6px;">
+                        <strong>Author:</strong> ${art.authors}
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--accent-cyan); word-break: break-all;">
+                        <strong>DOI:</strong> <a href="${doiLink}" target="_blank" style="color: var(--accent-cyan); text-decoration: none;">${doiLink}</a>
+                    </p>
+                </div>
+            `;
+        }).join('');
+        
+    } catch (error) {
+        console.error("Error loading articles:", error);
+        const container = document.getElementById('recent-articles-container');
+        if (container) {
+            container.innerHTML = '<p style="color: var(--text-muted); font-size: 0.9rem;">Could not load articles.</p>';
+        }
+    }
+});
+</script>
+</body>
+</html>
