@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="https://ajsp.uz/authors.html">
+    <title>For Authors | Academic Journal</title>
+    <!-- favicon.ico -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Специфичные стили формы с поддержкой дневной/ночной темы */
+        .info-section {
+            margin-bottom: 25px;
+        }
+
+        .info-section h3 {
+            margin-bottom: 10px;
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-section p, 
+        .info-section ul, 
+        .info-section ol {
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .info-section ul, 
+        .info-section ol {
+            padding-left: 20px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: var(--border-color);
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 14px 18px;
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-dark);
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn-submit {
+            background-color: var(--primary-navy);
+            color: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 12px 28px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 6px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-theme .btn-submit {
+            background: var(--btn-glow-bg, #00f2fe);
+            color: var(--btn-glow-text, #070d19);
+        }
+
+        .btn-submit:disabled {
+            background-color: var(--text-muted);
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo-area">
+                <img src="images/logo.svg" alt="AJSP Logo" style="height: 42px; width: auto;">
+                <div>
+                    <div class="brand-title">Academic Journal</div>
+                    <div class="brand-subtitle">Science & Progress</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="authors.html" class="active">For Authors</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                    <li><a href="payment.html">Processing Fee</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container" style="margin-top: 40px;">
+        <main>
+            <!-- Block 1: Instructions -->
+            <section class="card">
+                <h2><i class="fa-solid fa-file-pen"></i> Guidelines for Authors</h2>
+                
+                <!-- 1. General Requirements -->
+                <div class="info-section">
+                    <h3><i class="fa-solid fa-circle-info"></i> 1. General Requirements</h3>
+                    <p style="margin-bottom: 10px;">
+                        The <strong>Academic Journal of Science and Progress</strong> accepts original research papers that have not been previously published and are not currently under consideration for publication elsewhere.
+                    </p>
+                    <ul>
+                        <li><strong>Language of Publication:</strong> Uzbek, Russian, or English.</li>
+                        <li><strong>Length:</strong> From 6 to 15 pages.</li>
+                        <li><strong>Originality (Anti-Plagiarism):</strong> A minimum similarity threshold of <strong>80%</strong> is required. All submissions undergo automated screening.</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Formatting Requirements -->
+                <div class="info-section">
+                    <h3><i class="fa-solid fa-sliders"></i> 2. Manuscript Formatting and Layout</h3>
+                    <ul>
+                        <li><strong>File Format:</strong> MS Word (.docx).</li>
+						<li><strong>Maximum File Size:</strong> 3MB.</li>
+                        <li><strong>Font and Size:</strong> Times New Roman, 12 pt.</li>
+                        <li><strong>Line Spacing:</strong> 1.15 or 1.5.</li>
+                        <li><strong>Margins:</strong> 2 cm on all sides.</li>
+                        <li><strong>Formulas and Tables:</strong> Equations must be inserted using MS Equation / MathType; tables and figures must be consecutively numbered and captioned.</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Article Structure (IMRAD) -->
+                <div class="info-section">
+                    <h3><i class="fa-solid fa-sitemap"></i> 3. Manuscript Structure</h3>
+                    <ol>
+                        <li><strong>UDC Index</strong> (placed in the upper left corner of the page).</li>
+                        <li><strong>Article Title</strong> (capitalized, concise, and reflective of the content).</li>
+                        <li><strong>Author Information:</strong> Full Name, academic degree/title, institutional affiliation, ORCID iD, and corresponding author's email address.</li>
+                        <li><strong>Abstract:</strong> 150–250 words outlining the research objective, methodology, and primary findings.</li>
+                        <li><strong>Keywords:</strong> 5–8 key terms or phrases.</li>
+                        <li><strong>Main Body (following the IMRAD format):</strong>
+                            <ul style="margin-top: 5px;">
+                                <li><em>Introduction</em> — contextual background, relevance, and objectives of the study.</li>
+                                <li><em>Materials and Methods</em> — methodological framework and research techniques.</li>
+                                <li><em>Results</em> — empirical data and analytical findings.</li>
+                                <li><em>Discussion and Conclusion</em> — interpretation of results and final conclusions.</li>
+                            </ul>
+                        </li>
+                        <li><strong>References:</strong> Inclusion of DOI links for cited sources is mandatory.</li>
+                    </ol>
+                </div>
+
+                <!-- 4. Peer Review and Publication -->
+                <div class="info-section" style="margin-bottom: 0;">
+                    <h3><i class="fa-solid fa-magnifying-glass-chart"></i> 4. Peer Review Process</h3>
+                    <p>
+                        All submitted manuscripts undergo a double-blind peer review process (<strong>Blind Review</strong>) conducted by subject matter experts. Based on the review outcomes, manuscripts are either accepted for publication, returned for revision, or rejected.
+                    </p>
+                </div>
+				
+				<!-- Manuscript Template Download Block -->
+<div class="info-section">
+    <h3><i class="fa-solid fa-file-word"></i> Download Manuscript Template</h3>
+    <p style="margin-bottom: 15px;">
+        To format your manuscript in compliance with the journal guidelines, please download the standard <strong>.docx</strong> template:
+    </p>
+    <a href="files/AJSP_Journal_Manuscript_Template.docx" download class="btn-submit" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none;">
+        <i class="fa-solid fa-download"></i> Download Template (.docx)
+    </a>
+</div>
+<div class="divider"></div>
+            </section>
+
+            <!-- Block 2: Submission Form -->
+            <section class="card">
+                <h2><i class="fa-solid fa-paper-plane"></i> SUBMIT A MANUSCRIPT</h2>
+                <div class="divider"></div>
+
+                <form id="uploadForm" onsubmit="uploadToGoogleDrive(event)">
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" name="fullname" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-address">Email:</label>
+                        <input type="email" id="email-address" name="email" placeholder="email@domain.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file-upload">Manuscript File (.docx, .pdf):</label>
+                        <input type="file" id="file-upload" name="file" accept=".docx, .doc, .pdf" required>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn-submit">Submit</button>
+                </form>
+            </section>
+        </main>
+		<!-- Publication Ethics final -->
+<aside id="ethics-aside">
+    <div class="card">
+        <h2><i class="fa-solid fa-scale-balanced"></i> Publication Ethics</h2>
+        <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+            The <strong>Academic Journal of Science and Progress</strong> strictly adheres to the core principles of the Committee on Publication Ethics (<strong>COPE</strong>) and internationally recognized academic publishing standards.
+        </p>
+        <ul style="color: var(--text-muted); line-height: 1.6; padding-left: 20px;">
+            <li style="margin-bottom: 15px;">
+                <strong style="color: var(--text-dark); display: block; margin-bottom: 3px;">Authorship and Contributorship:</strong>
+                Authorship must be limited to those who have made a significant contribution to the conception, design, execution, or interpretation of the reported study. Honorary authorship or the omission of genuine contributors is strictly prohibited.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <strong style="color: var(--text-dark); display: block; margin-bottom: 3px;">Plagiarism and Fabrication:</strong>
+                Any form of plagiarism, unauthorized appropriation of others' ideas without proper citation, and data fabrication or falsification are strictly forbidden. All submissions are screened using automated anti-plagiarism detection tools.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <strong style="color: var(--text-dark); display: block; margin-bottom: 3px;">Duplicate Submission:</strong>
+                Submitting manuscripts that have been previously published or are concurrently under consideration in other scholarly journals is impermissible.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <strong style="color: var(--text-dark); display: block; margin-bottom: 3px;">Conflict of Interest:</strong>
+                Authors must disclose any financial, personal, or organizational conflicts of interest that could inappropriately influence or bias their research outcomes or interpretation.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <strong style="color: var(--text-dark); display: block; margin-bottom: 3px;">Peer Review Integrity:</strong>
+                Reviewers and editorial board members ensure the confidentiality and objective evaluation of manuscripts through a Double-Blind Peer Review process. Reviewers are prohibited from utilizing manuscript data for personal advantage.
+            </li>
+            <li style="margin-bottom: 15px;">
+                <strong style="color: var(--text-dark); display: block; margin-bottom: 3px;">Retraction Policy:</strong>
+                In the event of significant errors or breaches of publication ethics in published articles, the editorial board reserves the right to issue retractions or corrections in accordance with COPE guidelines.
+            </li>
+        </ul>
+    </div>
+</aside>
+    </div>
+    <footer>&copy; 2026 Academic Journal of Science and Progress. All rights reserved.</footer>
+    
+    <script src="theme.js"></script>
+    <script>
+    async function uploadToGoogleDrive(event) {
+        event.preventDefault();
+
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz4XRDppNmatsdaivlDQvVF4hDL0W7NXhNvSqdcmhKr7CA-Kb5YSPIvwo971PFWq2eO/exec"; 
+
+        const btn = document.getElementById('submitBtn');
+        const fileInput = document.getElementById('file-upload');
+        const file = fileInput.files[0];
+
+        if (!file) return;
+
+        btn.innerText = 'Submitting...';
+        btn.disabled = true;
+
+        const reader = new FileReader();
+        reader.onload = async function () {
+            const rawBytes = reader.result.split(',')[1];
+
+            const formData = new URLSearchParams();
+            formData.append('file', rawBytes);
+            formData.append('filename', file.name);
+            formData.append('mimetype', file.type);
+            formData.append('name', document.getElementById('full-name').value);
+            formData.append('email', document.getElementById('email-address').value);
+
+            try {
+                await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                alert('Manuscript submitted successfully!');
+                document.getElementById('uploadForm').reset();
+            } catch (error) {
+                alert('An error occurred. Please try again.');
+                console.error(error);
+            } finally {
+                btn.innerText = 'Submit';
+                btn.disabled = false;
+            }
+        };
+
+        reader.readAsDataURL(file);
+    }
+    </script>
+</body>
+</html>
