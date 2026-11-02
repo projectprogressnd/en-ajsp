@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>October 2026 - Issue 1 | Academic Journal</title>
+    <!-- favicon.ico -->
+    <link rel="icon" type="image/x-icon" href="https://en.ajsp.uz/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://en.ajsp.uz/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://en.ajsp.uz/css/all.min.css">
+    <link rel="stylesheet" href="https://en.ajsp.uz/style.css">
+    <style>
+        /* Специфичные стили для страницы выпуска в едином стиле сайта */
+        .issue-hero-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        .issue-cover {
+            flex: 0 0 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: var(--bg-light);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .issue-cover img {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 1 / 1.414;
+            object-fit: cover;
+        }
+        .issue-info h3 {
+            font-size: 1.4rem;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .issue-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .issue-meta-grid {
+            display: flex;
+            gap: 20px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+        .issue-meta-grid strong {
+            color: var(--primary-navy);
+        }
+
+        /* Карточка статьи в едином стиле */
+        .article-item-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .article-item-info {
+            flex: 1;
+        }
+        .article-item-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+        .article-item-title:hover {
+            color: var(--accent-cyan);
+        }
+        .article-item-author {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        .article-item-doi {
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            font-family: monospace;
+        }
+        .article-item-pdf-btn {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        .article-item-pdf-btn i {
+            color: #ef4444;
+        }
+        .article-item-pdf-btn:hover {
+            background: rgba(2, 132, 199, 0.08);
+            border-color: var(--accent-cyan);
+            box-shadow: var(--glow-shadow);
+        }
+
+        @media (max-width: 768px) {
+            .issue-hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .issue-meta-grid {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .article-item-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .article-item-pdf-btn {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo-area">
+                <img src="https://en.ajsp.uz/images/logo.svg" alt="AJSP Logo" style="height: 42px; width: auto;">
+                <div>
+                    <div class="brand-title">Academic Journal</div>
+                    <div class="brand-subtitle">Science & Progress</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://en.ajsp.uz/about.html">About Journal</a></li>
+                    <li><a href="https://en.ajsp.uz/authors.html">For Authors</a></li>
+                    <li><a href="https://en.ajsp.uz/archive.html" class="active">Archive</a></li>
+                    <li><a href="https://en.ajsp.uz/payment.html">Payment</a></li>
+                    <li><a href="https://en.ajsp.uz/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container" style="grid-template-columns: 1fr;">
+        <main>
+            <!-- Блок с обложкой в едином стиле сайта (card) -->
+            <div class="card">
+                <h2><i class="fa-solid fa-book-open"></i> October 2026 Volume 1 — Issue 1</h2>
+                <div class="issue-hero-content">
+                    <div class="issue-cover">
+                        <img src="https://en.ajsp.uz/images/cover_102026.jpg" alt="Academic Journal - October 2026 Cover">
+                    </div>
+                    <div class="issue-info" style="flex: 1;">
+                        <h3>Academic Journal of Science and Progress</h3>
+                        <p>It is a multidisciplinary open-access journal publishing materials in the following fields: agricultural sciences, applied mathematics, biology and life sciences, chemistry, computer and information sciences, earth sciences, ecology and environmental sciences, engineering and technology, medicine and healthcare, physics...</p>
+                        <div class="issue-meta-grid">
+                            <span><strong>Publication Date:</strong> 2026-10-01</span>
+                            <span><strong>ISSN:</strong> 3162-1732</span>
+                        </div>
+						<!-- open page button for full issue -->
+<div style="margin-top: 20px;">
+    <a href="https://ajsp.uz/files/issue2026/New_Issue_10_2026_TestXYZ.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; background-color: var(--primary-navy); color: var(--bg-card); text-decoration: none; border-radius: 8px; font-size: 0.95rem; font-weight: 600; border: 1px solid var(--border-color); transition: all 0.3s ease;">
+        <i class="fa-solid fa-book-open" style="color: var(--accent-cyan);"></i> Open Full Issue
+    </a>
+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Список статей выпуска -->
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+				<!-- 5 статья выпуска -->
+				<div class="card article-item-card">
+                    <div class="article-item-info">
+                        <a href="article_16102026.html" target="_blank" class="article-item-title">
+                            IMPACT OF IRRIGATION TECHNOLOGIES ON THE MELIORATIVE CONDITION OF LANDS
+                        </a>
+                        <div class="article-item-author">
+                            <strong>Author:</strong> O‘razkeldiyev Abduvoxid Baxtiyarovich
+                        </div>
+                        <div class="article-item-doi">
+                            <a href="https://doi.org/10.5281/zenodo.23558126" target="_blank">DOI: https://doi.org/10.5281/zenodo.23558126.ajsp.2026.10.16</a>
+                        </div>
+                    </div>
+                    <a href="https://ajsp.uz/files/issue2026/Sugorish_texnolog_erlar_mel.pdf" class="article-item-pdf-btn" title="View PDF">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+				<!-- 4 статья выпуска -->
+				<div class="card article-item-card">
+                    <div class="article-item-info">
+                        <a href="article_20102026.html" target="_blank" class="article-item-title">
+                            STUDY OF THE APPLICATION OF BIOTECHNOLOGIES IN CULTIVATING CROPS ON SALINE LANDS OF UZBEKISTAN
+                        </a>
+                        <div class="article-item-author">
+                            <strong>Author:</strong> Shirokova Yuliya Illarionovna, Paluashova Gauharay Kalbaevna
+                        </div>
+                        <div class="article-item-doi">
+                            <a href="https://doi.org/10.5281/zenodo.23835527" target="_blank">DOI: https://doi.org/10.5281/zenodo.23835527.ajsp.2026.10.20</a>
+                        </div>
+                    </div>
+                    <a href="https://ajsp.uz/files/issue2026/ИССЛЕДОВАНИЕ_ПРИМЕНЕНИЯ_БИОТЕХНОЛОГИЙ_ПРИ_ВЫРАЩИВАНИИ.pdf" class="article-item-pdf-btn" title="View PDF">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+				<!-- 3 статья выпуска -->
+				<div class="card article-item-card">
+                    <div class="article-item-info">
+                        <a href="article_22102026.html" target="_blank" class="article-item-title">
+                            MATHEMATICAL MODEL OF RIVER FLOW MOTION IN THE ZONE OF BARRAGE-FREE WATER INTAKES
+                        </a>
+                        <div class="article-item-author">
+                            <strong>Author:</strong> Ikramova M.R., Dalabaev U., Umarova Sh.
+                        </div>
+                        <div class="article-item-doi">
+                            <a href="https://doi.org/10.5281/zenodo.23649164" target="_blank">DOI: https://doi.org/10.5281/zenodo.23649164.ajsp.2026.10.22</a>
+                        </div>
+                    </div>
+                    <a href="https://ajsp.uz/files/issue2026/МАТЕМАТИЧЕСКАЯ_МОДЕЛЬ_ДВИЖЕНИЯ_РЕЧНОГО_ПОТОКА_AJSP_V4.pdf" class="article-item-pdf-btn" title="View PDF">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+                <!-- Следующая статья выпуска -->
+                <div class="card article-item-card">
+                    <div class="article-item-info">
+                        <a href="article_102026.html" target="_blank" class="article-item-title">
+                            EVALUATION OF THE IMPACT OF CHANNEL DEFORMATIONS ON THE RELIABILITY OF OBSERVATION DATA AT THE QIPCHOQ GAUGING STATION
+                        </a>
+                        <div class="article-item-author">
+                            <strong>Author:</strong> Jurayev Bahrom Bahriddinovich
+                        </div>
+                        <div class="article-item-doi">
+							<a href="https://doi.org/10.5281/zenodo.23553230" target="_blank">DOI: https://doi.org/10.5281/zenodo.23553230.ajsp.2026.10.18</a>                             
+                        </div>
+                    </div>
+                    <a href="article_102026.html" class="article-item-pdf-btn" title="View PDF">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+				<!-- Следующая статья выпуска -->
+				<div class="card article-item-card">
+                    <div class="article-item-info">
+                        <a href="article_23102026.html" target="_blank" class="article-item-title">
+                            OPTIMAL OPERATION MODES OF AMU DARYA RESERVOIRS FOR LOW-WATER, AVERAGE-WATER, AND HIGH-WATER YEARS
+                        </a>
+                        <div class="article-item-author">
+                            <strong>Author:</strong> Ikramova Malika Rahimberdiyevna
+                        </div>
+                        <div class="article-item-doi">
+							<a href="https://doi.org/10.5281/zenodo.23649455" target="_blank">DOI: https://doi.org/10.5281/zenodo.23649455.ajsp.2026.10.23</a>                         
+                        </div>
+                    </div>
+                    <a href="https://ajsp.uz/files/issue2026/Suv_kami_ortacha_suvlilik.pdf" target="_blank" class="article-item-pdf-btn" title="View PDF">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+				<!-- Следующая статья выпуска -->
+				<div class="card article-item-card">
+                    <div class="article-item-info">
+                        <a href="article_26102026.html" target="_blank" class="article-item-title">
+                            WATER QUALITY OF SURFACE WATER BODIES IN BUKHARA REGION
+                        </a>
+                        <div class="article-item-author">
+                            <strong>Author:</strong> U.A.Sodikova, I.A.Usmanov, M.Sh.Abdiyeva
+                        </div>
+                        <div class="article-item-doi">
+							<a href="https://doi.org/10.5281/zenodo.23702867" target="_blank">DOI: https://doi.org/10.5281/zenodo.23702867.ajsp.2026.10.26</a>                         
+                        </div>
+                    </div>
+                    <a href="https://ajsp.uz/files/issue2026/Buhoro_viloyatidagi_er_usti.pdf" target="_blank" class="article-item-pdf-btn" title="View PDF">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </main>
+    </div>
+
+    <footer>&copy; 2026 Academic Journal of Science and Progress. All rights reserved.</footer>
+
+    <script src="theme.js"></script>
+</body>
+</html>
